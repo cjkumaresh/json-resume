@@ -10,6 +10,7 @@
 8. npm install --save prop-types
 9. npm install --save redux react-redux
 10. npm install --save sanitize.css
-
-[git] To sync forked repo with remote:
-https://digitaldrummerj.me/git-syncing-fork-with-original-repo/
+11. npm install --save-dev @types/react @types/react-dom
+12. npm install --save-dev typescript ts-loader source-map-loader
+13. npm install --save @types/fontfaceobserver
+14. npm install --save @types/styled-components

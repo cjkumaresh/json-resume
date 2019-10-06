@@ -3,9 +3,9 @@
  *
  * entry file for the app
  */
-import React from "react";
-import ReactDOM from "react-dom";
-import FontFaceObserver from "fontfaceobserver";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import * as FontFaceObserver from "fontfaceobserver";
 import "sanitize.css/sanitize.css";
 
 // root app
