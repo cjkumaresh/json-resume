@@ -5,11 +5,16 @@
  */
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
 import * as FontFaceObserver from "fontfaceobserver";
 import "sanitize.css/sanitize.css";
 
 // root app
 import App from "./containers/App";
+import rootReducer from "./reducers";
+import { APP_NAME } from "./constants";
+import { addArticle } from "./actions";
 
 const openSansObserver = new FontFaceObserver("Mansalva", {});
 
@@ -23,7 +28,12 @@ openSansObserver.load().then(
   }
 );
 
-const MOUNT_NODE = document.getElementById("app");
-const APP_NAME = "Json Resume";
+const store = createStore(rootReducer);
+const MOUNT_NODE = document.getElementById("root");
 
-ReactDOM.render(<App name={APP_NAME} />, MOUNT_NODE);
+ReactDOM.render(
+  <Provider store={store}>
+    <App name={APP_NAME} />
+  </Provider>,
+  MOUNT_NODE
+);

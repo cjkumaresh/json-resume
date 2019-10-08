@@ -1,7 +1,10 @@
 import * as React from "react";
 import GlobalStyles from "../../global-styles";
+import styled from "styled-components";
 
-import "./App.css";
+const AppWrapper = styled.div`
+  margin: 24px;
+`;
 
 export interface AppProps {
   name: string;
@@ -10,10 +13,10 @@ export interface AppProps {
 class App extends React.Component<AppProps, {}> {
   render() {
     return (
-      <div className="App">
+      <AppWrapper className="App">
         <h1> {this.props.name} </h1>
         <GlobalStyles />
-      </div>
+      </AppWrapper>
     );
   }
 }
